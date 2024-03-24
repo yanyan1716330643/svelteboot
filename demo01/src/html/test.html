@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天社区首页</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .nav {
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            overflow: hidden;
+        }
+
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .post {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .post-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ccc;
+        }
+
+        .post-body {
+            font-size: 16px;
+        }
+
+        .login-box {
+            width: 300px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #57a3e8;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-box button:hover {
+            background-color: #4793d8;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>聊天社区</h1>
+</div>
+<div class="nav">
+    <a href="#">首页</a>
+    <a href="#">社区动态</a>
+    <a href="#">好友列表</a>
+    <a href="#">设置</a>
+</div>
+<div class="content">
+    <div class="post">
+        <div class="post-header">
+            <div class="post-avatar"></div>
+            <div class="post-info">
+                <span class="post-author">用户名</span>
+                <span class="post-date">发布时间</span>
+            </div>
+        </div>
+        <div class="post-body">
+            这是一条社区动态示例，你可以在这里发布你的动态，和好友们分享你的生活点滴。
+        </div>
+    </div>
+    <!-- 更多社区动态... -->
+</div>
+<div class="login-box<div class="login-box">
+<h3>登录</h3>
+<form id="loginForm">
+    <input type="text" id="username" placeholder="用户名" required>
+    <input type="password" id="password" placeholder="密码" required>
+    <button type="submit">登录</button>
+</form>
+<p>还没有账号？<a href="#">注册</a></p>
+</div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // 这里可以添加登录逻辑，比如验证用户名和密码，然后跳转到用户主页等
+        alert('登录成功！用户名：' + username);
+    });
+</script>
+</body>
+</html>
